@@ -7,7 +7,7 @@ const cors = require('cors');
 const dbConfig = require('./knexfile');
 const server = express();
 const db = knex(dbConfig.production);
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 const axios = require('axios');
 const helmet = require('helmet')
 const request = require('request')
@@ -30,8 +30,8 @@ const options = {
 	headers: headers
 };
 
-server.listen(PORT, function () {
-	console.log(`\n=== Web API Listening on httpL//localhost:${PORT} ===\n`)
+server.listen(port, () => {
+        console.log(`** Traversing on port ${port} **`);
 })
 
 let currentRoom = null
